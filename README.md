@@ -1,17 +1,5 @@
-# Google Maps JavaScript Sample
+Reval: Revalute your land usage
 
-This sample is generated from @googlemaps/js-samples located at
-https://github.com/googlemaps/js-samples.
+Created by: Xander Sweet, Ludwig Lechtreck
 
-## Setup
-
-```sh
-npm i
-npm start  # development
-npm run build  # production
-```
-
-## Feedback
-
-For feedback related to this sample, please open a new issue on
-[GitHub](https://github.com/googlemaps/js-samples/issues).
+Hacklytics 2024
