@@ -31,5 +31,10 @@
     "typescript": "^5.2.2",
     "vite": "^5.0.12"
   },
-  "private": true
+  "private": true,
+  "dependencies": {
+    "chart.js": "^4.4.1",
+    "plotly.js": "^2.29.0",
+    "plotly.js-dist": "^2.29.0"
+  }
 }

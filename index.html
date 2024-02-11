@@ -13,7 +13,6 @@
     <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
 
     <link rel="stylesheet" type="text/css" href="./style.css" />
-    <script type="module" src="./index.ts"></script>
   </head>
   <body>
     <div id="heading-wrapper">
@@ -27,6 +26,7 @@
         <button id="calculate-button">Calculate</button>
         <button id="reset-button">Reset</button>
     </div>
+
     <!-- 
       The `defer` attribute causes the callback to execute after the full HTML
       document has been parsed. For non-blocking uses, avoiding race conditions,
@@ -34,8 +34,21 @@
       See https://developers.google.com/maps/documentation/javascript/load-maps-js-api
       for more information.
       -->
+      <script type="module" src="./index.ts"></script>
+      <div id="chart-table-wrapper">
+        <canvas style="width: 100%" id="myChart"></canvas>
+        <div id="table-wrapper">
+            <h1 id="land-text"></h1>
+            <h1 id="setup-text"></h1>
+            <h1 id="yearly-text"></h1>
+        </div>
+      </div>
+      
+      <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+      
+
     <script
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDOVw7jclt7tnbOqIlOM5IYkl6JTgr3Grs&callback=initMap&libraries=drawing&v=weekly"
+      src="https://maps.googleapis.com/maps/api/js?key=&callback=initMap&libraries=drawing&v=weekly"
       defer
     ></script>
   
