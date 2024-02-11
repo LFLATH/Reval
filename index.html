@@ -6,15 +6,27 @@
 -->
 <html>
   <head>
-    <title>Drawing Tools</title>
+    <title>Reval</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baumans&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">    
     <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
 
     <link rel="stylesheet" type="text/css" href="./style.css" />
     <script type="module" src="./index.ts"></script>
   </head>
   <body>
-    <div id="map"></div>
+    <div id="heading-wrapper">
+        <h1 id="heading">Reval</h1>
+    </div>
+    
 
+    <div id="map"></div>
+    <div id="buttons-wrapper">
+        <button id="delete-button">Delete</button>
+        <button id="calculate-button">Calculate</button>
+        <button id="reset-button">Reset</button>
+    </div>
     <!-- 
       The `defer` attribute causes the callback to execute after the full HTML
       document has been parsed. For non-blocking uses, avoiding race conditions,
@@ -22,9 +34,9 @@
       See https://developers.google.com/maps/documentation/javascript/load-maps-js-api
       for more information.
       -->
-    <script
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg&callback=initMap&libraries=drawing&v=weekly"
+    <!-- <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCq2IlCgT1Vf21tQ0aIusOQcZhq82WpKe4&callback=initMap&libraries=drawing&v=weekly"
       defer
-    ></script>
+    ></script> -->
   </body>
 </html>

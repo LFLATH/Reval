@@ -8,9 +8,69 @@
  * that contains the map. 
  */
 #map {
-  height: 100%;
+  height: 600px;
 }
 
+
+#heading-wrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    color: #DB5A42;
+    font-size: 24pt;
+    font-family: "Roboto", sans-serif;
+
+}
+#delete-button {
+    background-color: #DB5A42;
+    border-radius: 12px;
+    height: 55px;
+    width: 300px;
+    border: none;
+    margin-left: 100px;
+    color: #FFD275;
+    font-family: "Roboto", sans-serif;
+
+
+}
+#reset-button {
+    background-color: #DB5A42;
+    border-radius: 12px;
+    height: 55px;
+    width: 300px;
+    border: none;
+    margin-left: 200px;
+    color: #FFD275;
+    font-family: "Roboto", sans-serif;
+
+
+}
+#reset-button:hover {
+    cursor: pointer;
+}
+#calculate-button {
+    background-color: #DB5A42;
+    border-radius: 12px;
+    height: 55px;
+    width: 300px;
+    border: none;
+    margin-left: 200px;
+    color: #FFD275;
+    font-family: "Roboto", sans-serif;
+
+
+}
+#calculate-button:hover {
+    cursor: pointer;
+}
+#button-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+#delete-button:hover {
+    cursor: pointer;
+}
 /* 
  * Optional: Makes the sample page fill the window. 
  */
@@ -19,5 +79,6 @@ body {
   height: 100%;
   margin: 0;
   padding: 0;
+  background-color: #FFD275;
 }
 
