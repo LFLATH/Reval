@@ -27,9 +27,9 @@
   },
   "devDependencies": {
     "@types/google.maps": "^3.53.5",
+    "@types/jquery": "^3.5.29",
     "typescript": "^5.2.2",
     "vite": "^5.0.12"
   },
-  "private": true,
-  "dependencies": {}
+  "private": true
 }

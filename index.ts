@@ -38,13 +38,12 @@ function initMap(): void {
     coordinates = (polygon.getPath().getArray());
     shape = polygon;
     calculateCenter();
+    area = google.maps.geometry.spherical.computeArea(polygon.getPath());
     geocodeLatLng(geocoder);
     drawingManager.setOptions({
         drawingControl: false
     });
-    area = google.maps.geometry.spherical.computeArea(polygon.getPath()); 
   });
-
   drawingManager.setMap(map);
 }
 
@@ -74,6 +73,7 @@ function geocodeLatLng(geocoder) {
       .geocode({ location: latlng })
       .then((response) => {
         getCountyState(response['results'][0]['address_components']);
+
       })
       .catch((e) => window.alert("Geocoder failed due to: " + e));
 }
@@ -88,10 +88,26 @@ function getCountyState(input: any) {
             stateIdx = i;
         }
     }
-    
     county = input[countyIdx]['long_name'];
-    state = input[stateIdx]['long_name']; 
+    state = input[stateIdx]['long_name'];
+    callAPI(center[0], center[1], county, state, area); 
+   
 }
   
 window.initMap = initMap;
 export {};
+
+function callAPI(latitudeTemp, longitudeTemp, countyTemp, stateTemp, areaTemp) {
+let formData = new FormData();
+formData.append("latitude", latitudeTemp);
+formData.append("longitude", longitudeTemp);
+formData.append("county", countyTemp);
+formData.append("state", stateTemp);
+formData.append("area", areaTemp);
+let data = new URLSearchParams(formData as any);
+fetch("http://127.0.0.1:5000/", {
+  method: "POST",
+  mode: "no-cors",
+  body: data,
+})
+}
